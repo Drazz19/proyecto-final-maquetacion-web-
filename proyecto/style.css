@@ -1,0 +1,224 @@
+/* NORMALIZACION */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background: url(/pxfuel.jpg) fixed;
+    background-size: cover;
+    background-color: black;
+    overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+}
+
+#fondo {
+    width: 100%;
+    height: 25vh; /* Usa el 100% de la altura de la ventana */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 15px 3%;
+    background-color: black;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.navlist {
+    display: flex; 
+}
+
+.navlist a {
+    margin-left: 50px; /* Ajustado el margen izquierdo */
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 200px solid transparent;
+    transition: all ;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white; /* Añade una línea blanca debajo del enlace */
+    padding-bottom: -20px; /* Agrega espacio debajo del enlace para la barra */
+}
+
+.menuicon {
+    color: rgb(204, 3, 3);
+    font-size: 30px; /* Tamaño del icono ajustado */
+    display: block;
+    cursor: pointer;
+}
+
+#menutoggle {
+    display: none;
+}
+
+.menuiconaction{
+    display: none;
+    font-size: 20px; /* Tamaño del icono ajustado */
+    z-index: 101;
+    cursor: pointer
+    
+}
+
+section {
+    padding: 0 8%;
+}
+
+.parrafo {
+    font-family: Roboto;
+}
+
+.parraf {
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(45deg, #e0e0e0, #b3b1b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero {
+    display: grid;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    margin-left: auto; /* Alinear al centro horizontal */
+    margin-right: auto; /* Alinear al centro horizontal */
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo ajustado */
+    padding-left: 20px; /* Ajuste del padding izquierdo */
+    padding-right: 20px; /* Ajuste del padding derecho */
+}
+
+.exp {
+    font-size: 20px;
+    text-align: center; /* Alinear al centro horizontal */
+    margin-top: 50px; /* Ajuste del margen superior */
+    transition: transform 0.5s ease;
+    margin-left: -2px;
+}
+.exp:hover{
+    opacity: 1; /* Opacidad completa al pasar el mouse */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Sombra más pronunciada */
+    transform: scale(1.1); /* Aumento de escala */
+}
+
+.parrafo a {
+    background-color: rgb(61, 58, 53);
+    border: 1px solid transparent;
+    padding: 15px 20px;
+    border-radius: 20px;
+}
+
+.exp i {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.par {
+    font-size: 60px;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 70px;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotate(-2deg);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cubos {
+    display: flex;
+    justify-content: center;
+    gap: 27px; /* Espacio entre los botones */
+    margin-top: -55px;
+    margin-left: -70px;
+    
+}
+
+@media (max-width: 1019px) {
+    .parraf {
+        font-size: 30px;
+    }
+    .cubos {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 1px;
+        margin-left: 20px;
+        
+    }
+    .exp {
+        margin-left: 0;
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-top: 10px; /* Ajuste del margen superior */
+    }
+}
+@media (max-width: 768px){
+    .menuiconaction{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 180px;
+        background-color: rgba(0, 0, 0, 0.9); /* Negro con 90% de opacidad */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all 1s ease-out;       
+    }
+    .navlist li {
+        margin-left: 0;
+        padding: 10px 0; /* Espacio entre los enlaces */
+        width: 100%;
+        text-align: center; /* Centrado horizontal */
+    }
+    li{
+        margin-top: -10px;
+        margin-right: 50px;
+        
+    }
+    #menutoggle:checked + label.menuiconaction + ul{
+        right: 0;
+    }
+    .exp{
+    margin-left: -20px;
+   }
+    .cubos{
+      margin-top: -20px;
+      display: grid;
+      flex-direction: column;
+      
+    
+    
+}   
